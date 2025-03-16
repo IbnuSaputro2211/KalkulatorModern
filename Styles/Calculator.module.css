@@ -1,0 +1,81 @@
+/* styles/Calculator.module.css */
+@keyframes backgroundAnimation {
+    0% { background-color: #ff6f61; }
+    25% { background-color: #6a5acd; }
+    50% { background-color: #3cb371; }
+    75% { background-color: #ff7f50; }
+    100% { background-color: #ff6f61; }
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundAnimation 10s infinite alternate;
+  }
+  
+  .calculator {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 320px;
+  }
+  
+  .display {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #eaeaea;
+    color: #333;
+  }
+  
+  .buttonContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .button {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff6f61; /* Warna tombol */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .button:hover {
+    background-color: #ff4c3b; /* Warna saat hover */
+    transform: scale(1.05);
+  }
+  
+  .clearButton {
+    grid-column: span 4;
+    background-color: #ff3d00; /* Warna tombol clear */
+  }
+  
+  .clearButton:hover {
+    background-color: #ff1a00; /* Warna saat hover untuk tombol clear */
+  }
+  
+  .operator {
+    background-color: #4caf50; /* Warna untuk operator */
+  }
+  
+  .operator:hover {
+    background-color: #388e3c; /* Warna saat hover untuk operator */
+  }
+  
+  /* Kelas untuk tombol tambah dan sama dengan */
+  .buttonWide {
+    grid-column: span 2; /* Lebar 2 kolom */
+  }
